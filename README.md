@@ -13,3 +13,6 @@ in dev mode
 
 in prod mode 
 >npm run build
+
+the server will start up at localhost:2323 port
+
