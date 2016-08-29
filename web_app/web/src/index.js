@@ -5,8 +5,12 @@ import ReactDOM from "react-dom";
 import {Router, browserHistory} from "react-router";
 import routes from "./routes";
 import configureStore from "./store/configureStore";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import {Provider} from "react-redux";
 import {loadCourses} from "./actions/courseActions";
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 //react imports
 //router imports
 //store imports
@@ -26,10 +30,15 @@ const store = configureStore();
 //load courses does an ajax call and sends the data to an action creator, which goes to a reducer and ......
 
 store.dispatch(loadCourses());
+injectTapEventPlugin();
 
 //Provider is used to connect the react components to the redux store
 ReactDOM.render (<Provider store={store} >
-      <Router history={browserHistory} routes={routes} />
+    <MuiThemeProvider   >
+        <Router history={browserHistory} routes={routes} />
+
+    </MuiThemeProvider>
+
   </Provider>,document.getElementById('app')
 );
 //ReactDOM.render(<HomePage/>,document.getElementById('app'));

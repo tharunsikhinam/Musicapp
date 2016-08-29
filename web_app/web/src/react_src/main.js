@@ -84,7 +84,7 @@ class Appcontainer extends React.Component
 
   render() {
       console.log("rerender");
-     return ( <div><br/><br/><br/> <form>  <input id="audio" onChange={(event) =>
+     return ( <div><br/><br/><br/> <form>  <input size="400" style={{width: '600px'}}  id="audio" onChange={(event) =>
     {
         this.setState({songs: event.target.files});
         this.setState({login: 1})
@@ -109,9 +109,9 @@ class Appcontainer extends React.Component
     }
 
     } type="file" multiple/>
-    <audio id="sound" controls autoPlay={true}></audio></form>
+    <audio id="sound"   controls autoPlay={true}></audio></form>
 
-         <input type="file" id="file-select" name="photos" multiple={true}  />
+         <input    type="file" id="file-select" name="photos" multiple={true}  />
     <button type="submit" id="upload-button">Upload</button>
         {this.showSongs(this.state.songs,this.state.songs.length)}
          {this.state.songNames.map((song,indexx)=>{
@@ -122,17 +122,24 @@ class Appcontainer extends React.Component
          })}
          <button type="button" onClick={()=>{
              this.setState({login: !this.state.login})
-             if(index<(list.length-1) && index!=0) {
-                 index = index - 1
-             }
-             else
+             if(index==0)
+             {
                  index=list.length-1;
+             }
+             else if(index<(list.length-1)) {
+                 index = index - 1;
+             }
+
+             else
+                 index=0;
 
              var  path = URL.createObjectURL(list[index]);
              console.log(list);
-             let song= new Audio(path);
-             document.getElementById('sound').src=path;
-         }} >PREV SONG</button>
+              document.getElementById('sound').src=path;
+
+
+         }
+             } >PREV SONG</button>
         <button type="button" onClick={()=>{
             this.setState({login: !this.state.login})
             if(index<(list.length-1)) {
@@ -147,6 +154,15 @@ class Appcontainer extends React.Component
             document.getElementById('sound').src=path;
               }} >NEXT SONG</button>
         </div>);
+  }
+
+  componentDidMount()
+  {
+
+      setInterval(()=>{
+          console.log(document.getElementById('sound').currentTime);
+
+      },500);
   }
 
   componentWillUnmount()
