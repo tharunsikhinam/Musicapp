@@ -45,7 +45,7 @@ module.exports = {
             'process.env': {
                 'NODE_ENV': JSON.stringify("production")
             },
-            'process.request_url': JSON.stringify('http://localhost:3333/public/'),
+            'process.request_url': JSON.stringify('http://localhost:2323/public/'),
         }),
         new ExtractTextPlugin('styles/style.css', {allChunks: true}),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),

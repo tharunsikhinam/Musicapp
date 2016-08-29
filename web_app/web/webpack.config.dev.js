@@ -23,7 +23,7 @@ export default {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
       new webpack.DefinePlugin({
-        'process.request_url': JSON.stringify('http://localhost:3333/public/')
+        'process.request_url': JSON.stringify('http://localhost:2323/public/')
       })
 
 

@@ -4,18 +4,21 @@ import {connect} from "react-redux";
 import * as actions from "../actions/courseActions";
 import {Logincont, Forgotcont} from "./pages/loginpage";
 
-
+let song;
+let list = [];
+let index=0;
 class Appcontainer extends React.Component
 {
   constructor()
   {
     super();
-
-    this.state = {login: 0, tok: "",disp: "",disptodos: "none"};
+    song = new Audio("/public/Narita.mp3");
+     this.state = {songNames: [],songs: ['1','2','2'],login: false, tok: "",disp: "",disptodos: "none"};
     this.disp =  this.disp.bind(this);
     this.change = this.change.bind(this);
     this.change2 = this.change2.bind(this);
     this.storeNewLogin = this.storeNewLogin.bind(this);
+      this.showSongs = this.showSongs.bind(this);
 
   }
   disp()
@@ -68,45 +71,87 @@ class Appcontainer extends React.Component
     debugger;
     this.props.dispatch(actions.storeLoginId(login));
   }
+  showSongs(son,length)
+  {
+        let songName= new Array();
+    }
 
   componentDidMount() {
     debugger;
     ReactDOM.render(<Forgotcont   />, document.getElementById('links'));
   }
 
+
   render() {
-    debugger;
-    return ( <div id="login-wrapper">
-      <nav className="navbar navbar-default">
+      console.log("rerender");
+     return ( <div><br/><br/><br/> <form>  <input id="audio" onChange={(event) =>
+    {
+        this.setState({songs: event.target.files});
+        this.setState({login: 1})
+        console.log(this.state.songs);
+         list = event.target.files;
+        console.log(event.target.files);
+        console.log(list.length);
+        index=0;
+        var  path = URL.createObjectURL(event.target.files[0]);
+        let song= new Audio(path);
+       document.getElementById('sound').src=path;
+        var songName= new Array();
+        for(var i=0;i<list.length;i++)
+        {
+            songName[i] =  list[i].name;
+        }
+        this.setState({songNames: songName})
 
 
-        <div className="navbar-header">
-          <a className="navbar-brand" href="#"><img src="/public/images/logo.png" alt="Quikr - Asaan hai Badalna"
-                                                    width={94}
-                                                    height={43}/></a>
-        </div>
 
-      </nav>
+        console.log(path);
+    }
 
-      <section className="home-login-banner">
-        <div id="login" className="login-inner-wrap">
+    } type="file" multiple/>
+    <audio id="sound" controls autoPlay={true}></audio></form>
 
-          <Logincont disptodo={this.state.disptodos} disps={this.state.disp} change={this.change2}
-                     store={this.storeNewLogin}/>
-        </div>
-      </section>
+         <input type="file" id="file-select" name="photos" multiple={true}  />
+    <button type="submit" id="upload-button">Upload</button>
+        {this.showSongs(this.state.songs,this.state.songs.length)}
+         {this.state.songNames.map((song,indexx)=>{
+             if(indexx == index)
+                 return(<div><font>Current Song</font>&nbsp;&nbsp;&nbsp;<a key={indexx}>{song}</a><br/></div>);
+             else
+             return(<div><a key={indexx}>{song}</a><br/></div>);
+         })}
+         <button type="button" onClick={()=>{
+             this.setState({login: !this.state.login})
+             if(index<(list.length-1) && index!=0) {
+                 index = index - 1
+             }
+             else
+                 index=list.length-1;
 
+             var  path = URL.createObjectURL(list[index]);
+             console.log(list);
+             let song= new Audio(path);
+             document.getElementById('sound').src=path;
+         }} >PREV SONG</button>
+        <button type="button" onClick={()=>{
+            this.setState({login: !this.state.login})
+            if(index<(list.length-1)) {
+                index = index + 1
+            }
+            else
+                index=0;
 
-      <footer className="text-center home-footer">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12">
-              <p>2015 © Quikr India Private Limited.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>);
+            var  path = URL.createObjectURL(list[index]);
+            console.log(list);
+            let song= new Audio(path);
+            document.getElementById('sound').src=path;
+              }} >NEXT SONG</button>
+        </div>);
+  }
+
+  componentWillUnmount()
+  {
+    song.pause();
   }
 
 }

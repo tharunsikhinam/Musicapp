@@ -3,8 +3,15 @@
  */
 import React, {PropTypes} from "react";
 
-
+let song;
 class App extends React.Component{
+
+  constructor()
+  {
+      super();
+
+
+  }
   render()
   {
     return (
@@ -12,6 +19,10 @@ class App extends React.Component{
         {this.props.children}
       </div>
     );
+  }
+  componentWillUnmount()
+  {
+    song.pause();
   }
 }
 

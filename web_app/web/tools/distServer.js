@@ -10,7 +10,7 @@ var  express =require("express");
 var  path =require("path");
 var  open = require( "open");
 
-const port = 3333;
+const port = 2323;
 const app = express();
 
 app.use(express.static('dist'));

@@ -4,17 +4,28 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+let song;
 class HomePage extends React.Component
 {
+    constructor()
+    {
+        super();
+        song = new Audio("/public/Narita.mp3");
+        song.play();
+    }
   render()
   {
     return (
       <div className="jumbotron">
-        <font size="20" display="block" color="black">Quikr HRMS      </font>
+        <font size="20" display="block" color="black">Random shizz in progress</font>
 
-        <Link to="login" className="btn btn-primary btn-lg">Login</Link>
+        <Link to="login" className="btn btn-primary btn-lg">Music Home</Link>
       </div>
     );
+  }
+  componentWillUnmount()
+  {
+      song.pause();
   }
 }
 export default HomePage;

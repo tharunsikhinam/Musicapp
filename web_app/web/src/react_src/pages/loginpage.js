@@ -52,7 +52,7 @@ class Logincont extends React.Component
     var url;
     //browserHistory.push("/images/logo.png");
     if(process.request_url != undefined)
-         url = "http://localhost:3333/public/";
+         url = "http://localhost:2323/public/";
     //else
         url = process.request_url + "auth.json";
     console.log(url);
