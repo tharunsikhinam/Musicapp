@@ -1,0 +1,118 @@
+{
+  "checksum": {
+    "previous": "1578c6b9c0f3d729bba814e1fdd00ce4bdbd43ef7a4c333f132f92bbf07398df",
+    "current": "1578c6b9c0f3d729bba814e1fdd00ce4bdbd43ef7a4c333f132f92bbf07398df"
+  },
+  "fonts": [
+    "../quikr-icons_1578c6b9c0f3d729bba814e1fdd00ce4.ttf",
+    "../quikr-icons_1578c6b9c0f3d729bba814e1fdd00ce4.svg",
+    "../quikr-icons_1578c6b9c0f3d729bba814e1fdd00ce4.woff",
+    "../quikr-icons_1578c6b9c0f3d729bba814e1fdd00ce4.eot"
+  ],
+  "glyphs": {
+    "add_files": {
+      "codepoint": 61872,
+      "source": "./add_files.svg"
+    },
+    "badge": {
+      "codepoint": 61873,
+      "source": "./badge.svg"
+    },
+    "birthday": {
+      "codepoint": 61874,
+      "source": "./birthday.svg"
+    },
+    "briefcase": {
+      "codepoint": 61875,
+      "source": "./briefcase.svg"
+    },
+    "calendar": {
+      "codepoint": 61876,
+      "source": "./calendar.svg"
+    },
+    "delete": {
+      "codepoint": 61877,
+      "source": "./delete.svg"
+    },
+    "demo": {
+      "codepoint": 61878,
+      "source": "./demo.svg"
+    },
+    "down": {
+      "codepoint": 61879,
+      "source": "./down.svg"
+    },
+    "edit": {
+      "codepoint": 61884,
+      "source": "./edit.svg"
+    },
+    "hamburger": {
+      "codepoint": 61753,
+      "source": "./hamburger.svg"
+    },
+    "holiday": {
+      "codepoint": 61880,
+      "source": "./holiday.svg"
+    },
+    "location": {
+      "codepoint": 61881,
+      "source": "./location.svg"
+    },
+    "management": {
+      "codepoint": 61885,
+      "source": "./management.svg"
+    },
+    "news": {
+      "codepoint": 61882,
+      "source": "./news.svg"
+    },
+    "right_arrow": {
+      "codepoint": 61886,
+      "source": "./right_arrow.svg"
+    },
+    "salary": {
+      "codepoint": 61883,
+      "source": "./salary.svg"
+    },
+    "search": {
+      "codepoint": 61790,
+      "source": "./search.svg"
+    },
+    "user": {
+      "codepoint": 61860,
+      "source": "./user.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "quikr-icons",
+    "force": true,
+    "input": {
+      "templates": ".",
+      "vectors": "."
+    },
+    "no_hash": false,
+    "output": {
+      "css": "..",
+      "fonts": "..",
+      "preview": ".."
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "../quikr-icons.css",
+    "../quikr-icons-preview.html"
+  ]
+}

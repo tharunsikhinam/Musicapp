@@ -1,0 +1,4 @@
+HOME=/Users/{{ web_user }}
+export HOME
+/usr/local/bin/npm install
+/usr/local/bin/npm run build

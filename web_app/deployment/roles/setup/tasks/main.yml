@@ -1,0 +1,44 @@
+---
+
+- name: Create service account for hrms ui
+  user: name=hrms_web
+        system=no
+        state=present
+        shell=/bin/bash
+
+- name: Install Nodejs on ubuntu
+  apt: name=nodejs state=present
+  when: ansible_os_family == "Debian"
+
+- name: Install npm on ubuntu
+  apt: name=npm state=present
+  when: ansible_os_family == "Debian"
+
+
+- name: Install node on mac
+  homebrew: name=node
+  become: true
+  become_user: quikr
+  when: ansible_os_family == "Darwin"
+
+
+- name: install npm
+  homebrew: name=npm
+  become: true
+  become_user: quikr
+
+- name: install npm-run-all on Debian
+  command: npm install npm-run-all -g
+  environment:
+    PATH: /usr/local/bin:$PATH
+
+- name: install npm-run-all on Debian
+  command: npm install babel-cli -g
+  environment:
+    PATH: /usr/local/bin:$PATH
+
+- name: Make hrms web root directory
+  file: path={{ root_directory }} state=directory  owner={{ web_user }} mode=755
+
+- name: Make hrms web log directory
+  file: path={{ root_log_directory }} state=directory  owner={{ web_user }} mode=755

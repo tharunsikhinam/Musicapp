@@ -1,0 +1,3 @@
+
+web_directory: "{{ root_directory }}/web"
+web_log_directory: "{{ root_log_directory }}/web"

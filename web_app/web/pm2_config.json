@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "hrms",
+      "script": "./tools/distServer.js",
+      "watch": true,
+      "exec_interpreter": "babel-node",
+      "exec_mode": "fork",
+    }
+  ]
+}

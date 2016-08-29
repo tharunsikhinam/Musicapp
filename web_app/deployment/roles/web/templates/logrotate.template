@@ -1,0 +1,11 @@
+{{ jobs.user_profile.logs }}
+{
+  rotate {{ log_rotate_count }}
+  {{ log_rotate_interval }}
+  compress
+  delaycompress
+  missingok
+  notifempty
+  copytruncate
+  size {{ log_rotate_size }}
+}

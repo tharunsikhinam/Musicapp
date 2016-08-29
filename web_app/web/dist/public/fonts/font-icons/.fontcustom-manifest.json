@@ -1,0 +1,111 @@
+{
+  "checksum": {
+    "previous": "2daab2325d0c4f77509972710cbd75523e7fb54c080c2b46cf0fad2082d29e47",
+    "current": "2daab2325d0c4f77509972710cbd75523e7fb54c080c2b46cf0fad2082d29e47"
+  },
+  "fonts": [
+    "fontcustom/fontcustom_2daab2325d0c4f77509972710cbd7552.ttf",
+    "fontcustom/fontcustom_2daab2325d0c4f77509972710cbd7552.svg",
+    "fontcustom/fontcustom_2daab2325d0c4f77509972710cbd7552.woff",
+    "fontcustom/fontcustom_2daab2325d0c4f77509972710cbd7552.eot"
+  ],
+  "glyphs": {
+    "add_files": {
+      "codepoint": 61697,
+      "source": "svgs/add_files.svg"
+    },
+    "badge": {
+      "codepoint": 61698,
+      "source": "svgs/badge.svg"
+    },
+    "birthday": {
+      "codepoint": 61699,
+      "source": "svgs/birthday.svg"
+    },
+    "briefcase": {
+      "codepoint": 61700,
+      "source": "svgs/briefcase.svg"
+    },
+    "calendar": {
+      "codepoint": 61701,
+      "source": "svgs/calendar.svg"
+    },
+    "delete": {
+      "codepoint": 61702,
+      "source": "svgs/delete.svg"
+    },
+    "demo": {
+      "codepoint": 61703,
+      "source": "svgs/demo.svg"
+    },
+    "down": {
+      "codepoint": 61704,
+      "source": "svgs/down.svg"
+    },
+    "edit": {
+      "codepoint": 61705,
+      "source": "svgs/edit.svg"
+    },
+    "hamburger": {
+      "codepoint": 61706,
+      "source": "svgs/hamburger.svg"
+    },
+    "holiday": {
+      "codepoint": 61707,
+      "source": "svgs/holiday.svg"
+    },
+    "location": {
+      "codepoint": 61708,
+      "source": "svgs/location.svg"
+    },
+    "news": {
+      "codepoint": 61709,
+      "source": "svgs/news.svg"
+    },
+    "salary": {
+      "codepoint": 61710,
+      "source": "svgs/salary.svg"
+    },
+    "search": {
+      "codepoint": 61711,
+      "source": "svgs/search.svg"
+    },
+    "user": {
+      "codepoint": 61712,
+      "source": "svgs/user.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "svgs",
+      "vectors": "svgs"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "fontcustom",
+      "fonts": "fontcustom",
+      "preview": "fontcustom"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "skip_first": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "fontcustom/fontcustom.css",
+    "fontcustom/fontcustom-preview.html"
+  ]
+}

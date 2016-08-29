@@ -1,0 +1,6 @@
+---
+
+root_directory: "/opt/hrms_web"
+root_log_directory: "/var/log/hrms_web"
+
+web_user: hrms_web

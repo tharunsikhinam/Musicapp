@@ -1,0 +1,38 @@
+---
+
+
+- name: Make hrms web directory
+  file: path={{ web_directory }} state=directory  owner={{ web_user }} mode=0777
+
+- name: Make hrms web log directory
+  file: path={{ web_log_directory }} state=directory  owner={{ web_user }} mode=755
+
+- name: delete tmp folder on build server if exist
+  local_action: file path=/tmp/hrms_web state=absent
+
+- name: create tmp folder on build server
+  local_action: file path=/tmp/hrms_web state=directory
+
+- name: copy new code to temp location on build server
+  copy: src={{ role_path }}/../../../web dest=/tmp/hrms_web
+
+
+- name: Make hrms web directory
+  file: path={{ web_directory }} state=directory  owner={{ web_user }} mode=0777 recurse=yes
+
+
+- name: Copy web directory from build server to web server
+  sudo: no
+  synchronize: src=/tmp/hrms_web/ dest={{ web_directory }} mode=push group=no perms=no times=no delete=true
+
+
+- name: Make hrms web directory
+  file: path={{ web_directory }} state=directory  owner={{ web_user }} mode=0777 recurse=yes
+
+- name: Npm install (only if new packages are required)
+  command: sudo su - hrms_web -c 'PATH=/usr/local/bin:$PATH && export PATH && cd /opt/hrms_web/web/web && npm install'
+
+
+- name: Npm run build ( to bundle and start the server )
+  command: sudo su - hrms_web -c 'PATH=/usr/local/bin:$PATH && export PATH && cd /opt/hrms_web/web/web && npm run build'
+

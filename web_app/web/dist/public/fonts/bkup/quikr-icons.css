@@ -1,0 +1,115 @@
+/*
+  Icon Font: quikr-icons
+*/
+
+@font-face {
+    font-family: "quikr-icons";
+    src: url("./quikr-icons_bdedaec9e2158bf34e7df81646cdfabc.eot");
+    src: url("./quikr-icons_bdedaec9e2158bf34e7df81646cdfabc.eot?#iefix") format("embedded-opentype"),
+    url("./quikr-icons_bdedaec9e2158bf34e7df81646cdfabc.woff") format("woff"),
+    url("./quikr-icons_bdedaec9e2158bf34e7df81646cdfabc.ttf") format("truetype"),
+    url("./quikr-icons_bdedaec9e2158bf34e7df81646cdfabc.svg#quikr-icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: "quikr-icons";
+        src: url("./quikr-icons_bdedaec9e2158bf34e7df81646cdfabc.svg#quikr-icons") format("svg");
+    }
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+}
+
+[data-icon]:before,
+.icon-add_files:before,
+.icon-badge:before,
+.icon-birthday:before,
+.icon-briefcase:before,
+.icon-calendar:before,
+.icon-delete:before,
+.icon-demo:before,
+.icon-down:before,
+.icon-hamburger:before,
+.icon-holiday:before,
+.icon-location:before,
+.icon-news:before,
+.icon-salary:before,
+.icon-search:before,
+.icon-user:before {
+    display: inline-block;
+    font-family: "quikr-icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.icon-add_files:before {
+    content: "\f1b0";
+}
+
+.icon-badge:before {
+    content: "\f1b1";
+}
+
+.icon-birthday:before {
+    content: "\f1b2";
+}
+
+.icon-briefcase:before {
+    content: "\f1b3";
+}
+
+.icon-calendar:before {
+    content: "\f1b4";
+}
+
+.icon-delete:before {
+    content: "\f1b5";
+}
+
+.icon-demo:before {
+    content: "\f1b6";
+}
+
+.icon-down:before {
+    content: "\f1b7";
+}
+
+.icon-hamburger:before {
+    content: "\f139";
+}
+
+.icon-holiday:before {
+    content: "\f1b8";
+}
+
+.icon-location:before {
+    content: "\f1b9";
+}
+
+.icon-news:before {
+    content: "\f1ba";
+}
+
+.icon-salary:before {
+    content: "\f1bb";
+}
+
+.icon-search:before {
+    content: "\f15e";
+}
+
+.icon-user:before {
+    content: "\f1a4";
+}

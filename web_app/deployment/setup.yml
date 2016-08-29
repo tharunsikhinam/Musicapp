@@ -1,0 +1,6 @@
+---
+- name: Does initial stage
+  hosts: web-servers
+  sudo: yes
+  roles:
+    - setup
