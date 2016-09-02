@@ -9,5 +9,7 @@ To run it in Dev mode
 to run it in prod
 
 >cd deployment/env
+
 >sh run.sh stage/production stage (single time)
+
 >sh run.sh stage/production web (every new change)
