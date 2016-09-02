@@ -163,26 +163,26 @@ class MusicPage extends React.Component {
                             </RaisedButton>
                             <RaisedButton secondary={true}   onClick={()=>{document.getElementById('sound').pause();}}><label style= {{"font-family": '"Shadows Into Light", "sans-serif"',fontSize: '20',marginLeft: '',color: '#FFFFFF' }}>pause</label>
                             </RaisedButton>
+                            <br/><br/>
+                            <input id='naam'type="text" onChange={(e)=>{sessionStorage.setItem('id',e.target.value);}} />
+
+                            {
+                                1
+                                    ?<RaisedButton disabled={false} primary={true} onClick={()=>{
+                                        this.setState({flag: !this.state.flag});
+                                        sessionStorage.setItem('id',document.getElementById('naam').value);}}>{sessionStorage.getItem('id')}</RaisedButton>:
+                                    <div style={{marginBottom: '-150px'}}></div>}
 
                         </div>
                     </Paper>
 
                 </div>
-                <br/><br/>
-                 {
-                    !sessionStorage.getItem('id')
-                ?
-                <div style={{marginBottom: '-150px'}}>
 
 
 
 
-                </div>: <div style={{marginBottom: '-150px'}}>
- </div>
-                }
+
                 <br/>
-                <div >
-                    <Charts/></div>
 
                 <Paper  zDepth={5} style={stylePaper }>
 
