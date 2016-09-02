@@ -4,8 +4,12 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-var socket=io();
- let song;
+
+
+  let song;
+
+const port = 2323;
+
 class HomePage extends React.Component
 {
     constructor()
@@ -21,8 +25,6 @@ class HomePage extends React.Component
       <div className="jumbotron">
         <font size="20" display="block" color="black">Random shizz in progress</font>
           <button onClick={()=>{
-              socket.emit('chat message',"sdafs");
-              return false;
 
 
           }}>click</button>
@@ -41,4 +43,7 @@ class HomePage extends React.Component
   }
 }
 export default HomePage;
+
+
+
 

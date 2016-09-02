@@ -14,8 +14,13 @@ class App extends React.Component{
   }
   render()
   {
+      const style={
+
+
+
+      };
     return (
-      <div>
+      <div style={style}>
         {this.props.children}
       </div>
     );

@@ -9,15 +9,15 @@ import AppContainer from "./react_src/main";
 import CoursePage from "./components/courses/CoursePage";
 import Forgot from "./react_src/containers/Forgot";
 import MusicPage from "./components/MusicPage";
-import MusicHome from "./components/MusicHome";
+import MusicHome from "./components/MusicDJ";
 export default(
   <Route path="/" component={App}>
     <IndexRoute component={HomePage}/>
     <Route path="/hrmslogin/indexx.html" component={Forgot}/>
     <Route path="forgot" component={Forgot}/>
     <Route path="users" component={CoursePage} />
-      <Route path="music" component={MusicHome} />
-      <Route path="tharunmusic" component={MusicPage} />
+      <Route path="djmusic" component={MusicHome} />
+      <Route path="music" component={MusicPage} />
     <Route path="login" component={AppContainer} />
   </Route>
 );
